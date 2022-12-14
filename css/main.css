@@ -1,0 +1,291 @@
+
+body{
+   overflow-x: hidden; 
+   background-color: lightgoldenrodyellow;
+   
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+.img-container {
+    max-width: 80px;
+    margin-top: 3px;
+    
+}
+
+img {
+    width: 80%;
+}
+
+table{
+    border-collapse: collapse;
+    width: 80vw;
+    height: 60vh;
+    max-height: 60vh;
+}
+
+tr{
+    border: 1px solid;
+    height: 30%;
+    max-height: 30%;
+}
+td {
+    text-align: center;
+    font-size: 20px;
+}
+.title-td{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: large;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 30%;
+    margin: auto;
+    
+}
+.title-td span{
+    width: max-content;
+}
+.btn-td{
+    width: 8%;
+}
+.price-rate-td{
+    width: 15%;
+}
+.id-td{
+    width: 14%;
+}
+.modal {
+    background-color: rgba(237, 35, 133, 0.912);
+     padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 150%;
+    height: 80vh;
+    min-width: 300px;
+    text-align: center;
+    transition: left .5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal.open {
+    left: 50%;
+}
+.modal h2{
+    color:whitesmoke;
+    text-decoration: overline;
+}
+.modal label {
+    color:whitesmoke;
+    font-size: larger;
+}
+
+.modal h4{
+    margin-right: 10px;
+    color:whitesmoke;
+    position: relative;
+    bottom: 22px;
+}
+.modal p {
+    color:whitesmoke;
+    text-align: left;
+    position: relative;
+    bottom: 25px;
+    max-height: 30%;
+
+}
+.modal-img-holder{
+    height: 40%;
+}
+.modal-img{
+    height: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 25px;
+}
+.btn-close-modal{
+
+}
+.rate-section{
+    margin-top: 10px;
+    display: flex;
+}
+.rate-section input{
+    text-align: center;
+    height: 1.5vh;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
+.filter-section{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 100px;
+}
+
+.main-container{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-content: center;
+    margin: 10px 50px;
+}
+
+.search {
+    margin: 10px;
+    height: 30px;
+}
+
+.range{
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;   
+}
+
+.btn-add{
+    text-align: left;
+    border: none;
+    width: 20%;
+    background-color: lightgoldenrodyellow;
+    font-size: 17px;
+    font-weight: bold;
+    color: blue;
+}
+.btn-lang{
+    text-align: left;
+    border: none;
+    width: 10%;
+    max-width: 45px;
+    background-color: lightgoldenrodyellow;
+    font-size: 17px;
+    font-weight: bold;
+    color: blue;
+}
+.lang-seperator{
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+body.rtl .lang-seperator{
+    right: 5px;
+}
+.btn-read{
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 0.5em;
+    font-size: larger;
+}
+.btn-read:hover{
+    background-color: rgba(100, 148, 237, 0.777);
+}
+.btn-update{
+    background-color: coral;
+    border: none;
+    border-radius: 0.5em;
+    font-size: larger;
+}
+.btn-update:hover{
+    background-color: rgba(255, 127, 80, 0.856);
+}
+.btn-delete{
+    background-color: chartreuse;
+    border: none;
+    border-radius: 0.5em;
+    font-size: larger;
+}
+.btn-delete:hover{
+    background-color: rgba(128, 255, 0, 0.745);
+}
+.btn-prev{
+    font-size: x-large;
+    border: none;
+    background-color: lightgoldenrodyellow;
+}
+.btn-next{
+    font-size: x-large;
+    border: none;
+    background-color: lightgoldenrodyellow;
+}
+
+.th-title{
+    cursor: pointer;
+}
+.th-price{
+    cursor: pointer;
+    width: 50px;
+}
+
+.add-section{
+    text-align: center;
+    background-color: rgb(222, 242, 255);
+    position: fixed;
+    top: 30vh;
+    bottom: 50vh;
+    right: 25vw;
+    left: 25vw;
+    padding: 20px;
+    min-height: fit-content;
+    min-width: fit-content;
+    border: solid 1px black;
+    box-shadow: 0 0 3px 3px rgb(136, 136, 255);
+}
+.update-section{
+    text-align: center;
+    background-color: rgb(222, 242, 255);
+    position: fixed;
+    top: 30vh;
+    bottom: 50vh;
+    right: 25vw;
+    left: 25vw;
+    padding: 20px;
+    min-height: fit-content;
+    min-width: fit-content;
+    border: solid 1px black;
+    box-shadow: 0 0 3px 3px rgb(136, 136, 255);
+}
+
+.books-card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.book-preview {
+    background-color: blanchedalmond;
+    color: darkviolet;
+    font-size: larger;
+    width: 20%;
+    margin:.5em;
+    border: 1px solid lightgray;
+    border-radius: .2em;
+    text-align: center;
+    padding: 5px;
+}
+.book-preview .btn-remove {
+    float:right;
+}
+
+.book-preview img {
+    max-width: 100%;
+}
+
+.book-preview h5 {
+    text-transform: capitalize;
+    text-decoration: overline;
+}
+
+.book-preview h6 span{
+    color: darkmagenta;
+    font-size: 1.5em;
+}
+.hide{
+    display: none;
+}

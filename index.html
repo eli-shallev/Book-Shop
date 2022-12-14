@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <button class="btn-lang" onclick="onSetLang('he')">עברית</button>
+    <span class="lang-seperator" >‖</span>
+    <button class="btn-lang" onclick="onSetLang('en')">English</button>
+    <div class="main-container">
+        <h1 data-trans="appTitle">My Book Shop</h1>
+        <section class="filter-section">
+            <span data-trans="setRating">Set Rating:</span> <input class="range-rate" type="range" min="0" max="10"
+                value="0" oninput="onSetFilterBy({rate: this.value})">
+            <span data-trans="setPrice">Set Price:</span> <input class="range-price" type="range" min="0" max="100"
+                value="0" oninput="onSetFilterBy({price: this.value})">
+            <input data-trans="search" type="search" class="search" oninput="onSetFilterBy({name: this.value})"
+                placeholder="Search Book">
+        </section>
+
+        <div class="btn-container">
+            <button data-trans="add" class="btn btn-add" onclick="onOpenAddBook()">Add new book</button>
+            <button data-trans="prev" class="btn btn-prev" onclick="onPrevPage()">⏪</button>
+            <button data-trans="next" class="btn btn-next" onclick="onNextPage()">⏩</button>
+            <button data-trans="toggleLayout" onclick="onToggleLayout()">toggle layout</button>
+        </div>
+
+        <section class="books-card-container"></section>
+
+        <table>
+            <thead>
+                <th data-trans="id">Id</th>
+                <th data-direction="up" class="th-title" onclick="onSort('title',this)"><span
+                        data-trans="title">Title</span> <span class="arrow-direction"></span> </th>
+                <th data-direction="up" class="th-price" onclick="onSort('price',this)"> <span
+                        data-trans="price">Price</span> <span class="arrow-direction"></span> </th>
+                        <th data-trans="rate">Rate</th>
+                <th data-trans="action" colspan="3">Action</th>
+            </thead>
+            <tbody class="book-container">
+
+            </tbody>
+        </table>
+
+        <form class="add-section hide" onsubmit="onAddBook(event)">
+            <span data-trans="bookName">Book Name: </span><input type="text" name="book-name">
+            <br>
+            <br>
+            <span data-trans="bookPrice">Book Price: </span><input type="text" name="book-price">
+            <br>
+            <br>
+            <button data-trans="btnAddBook">Add book</button>
+        </form>
+
+        <form class="update-section hide" onsubmit="onUpdateBook(event)">
+            <span data-trans="newBookPrice">New Book Price: </span><input type="text" name="new-book-price">
+            <br>
+            <br>
+            <button data-trans="btnUpdatePrice">Update Price</button>
+        </form>
+
+
+
+        <div class="modal">
+            <h2 class="modal-name-holder"></h2>
+            <section>
+                <label data-trans="modalPrice">Price: </label> <label>$</label> <label
+                    class="modal-price-holder"></label>
+            </section>
+            <section class="rate-section">
+                <h4 data-trans="modalRating">Rating:</h4>
+                <span class="rate-holder"></span>
+            </section>
+            <p class="modal-description-holder"></p>
+            <div class="modal-img-holder"></div>
+            <button class="btn-close-modal" data-trans="modalClose" onclick="onCloseModal()">Close</button>
+        </div>
+    </div>
+
+
+
+    <script src="services/util.services.js"></script>
+    <script src="sevices/i18n.services.js"></script>
+    <script src="services/storage.services.js"></script>
+    <script src="services/book.services.js"></script>
+    <script src="book.controller.js"></script>
+
+</body>
+
+</html>
